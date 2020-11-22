@@ -27,21 +27,21 @@ function setup() {
 
 
 function draw() {
+	
+  background("red");
   
-  background(0);
- 
   ground1.display();
   block1.display();
   block2.display();
   block3.display();
   paper1.display();
-  keyPressed();
+ 
  
 }
 function keyPressed () {
 
 	if(keyCode === UP_ARROW){
-		Matter.body.applyForce(paper1.body,paper1.body.position,{x:85,y:-85});
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:15,y:-15});
 	}
 
 
