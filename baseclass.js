@@ -14,7 +14,7 @@ class baseClass {
 
      this.image = loadImage("dustbingreen.png");
 
-     world.add(World,this.body);
+     World.add(world,this.body);
    }
 display () {
     var pos = this.body.position;
@@ -22,7 +22,7 @@ display () {
     translate(pos.x, pos.y);
     imageMode(CENTER);
 
-    image(this.image, 0 ,0, this,width. this.height);
+    image(this.image, 0 ,0, this.width, this.height);
     pop();
 }
 

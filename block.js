@@ -1,6 +1,6 @@
-class box extends baseClass {
-    constructor () {
-        super(x, y, 60, 30);
-        this.image = loadImage("dustbingreen.png")
+class dust extends baseClass {
+    constructor (x, y) {
+        super(x, y, 115, 95);
+        this.image = loadImage("dustbingreen.png");
     }
 }

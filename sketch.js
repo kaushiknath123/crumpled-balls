@@ -16,10 +16,11 @@ function setup() {
 	world = engine.world;
 
 	ground1 = new ground(400, 330, 900, 20);
-	block1 = new box(560, 260, 20, 100);
-	block2 = new box(740, 260, 20, 100);
-	block3 = new box(650, 310, 200, 20);
-	paper1 = new paper(100, 310, 20, 20);
+	dustbin = new dust(625, 260, 200, 200);
+	block2 = new box(560, 260, 20, 100);
+	block3 = new box(690, 260, 20, 100);
+	block4 = new box(625, 310, 150, 20);
+	paper1 = new paper(100, 300, 20, 20);
 
 	Engine.run(engine);
   
@@ -30,18 +31,21 @@ function draw() {
 	
   background("red");
   
+ 
+  paper1.display();
   ground1.display();
-  block1.display();
+  block4.display();
   block2.display();
   block3.display();
-  paper1.display();
+  
+  dustbin.display();
  
  
 }
 function keyPressed () {
 
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:15,y:-15});
+		Matter.Body.applyForce(paper1.body,paper1.body.position,{x:82,y:-85});
 	}
 
 
