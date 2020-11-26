@@ -1,12 +1,8 @@
 class baseClass {
 
-     constructor(x, y, width, height){
+     constructor(x, y, width, height, options){
 
-        var options = {
-            'restitution':0.8,
-            'friction':0.8,
-            'density':0.8
-     }
+       
      this.body = Bodies.rectangle(x, y, width, height, options);
 
      this.width = width;
@@ -22,7 +18,7 @@ display () {
     translate(pos.x, pos.y);
     imageMode(CENTER);
 
-    image(this.image, 0 ,0, this.width, this.height);
+    image(this.image, 0 ,0, this.width, 100);
     pop();
 }
 
